@@ -36,5 +36,6 @@ object ManualDI extends App{
   //Lets wait to make sure all reporters worked at least once
   Thread.sleep(Math.max(config.counterReporterPeriodMillis,config.gaugeReporterPeriodMillis)+100)
 
+  //We need to call exit explicitly since other threads are running on background
   System.exit(0)
 }
