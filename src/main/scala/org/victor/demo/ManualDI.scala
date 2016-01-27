@@ -33,7 +33,7 @@ object ManualDI extends App{
   Metrics.gauge("gauge2").update(300)
 
 
-  //Lets wait to mak sure all reporters workedd at least once
+  //Lets wait to make sure all reporters worked at least once
   Thread.sleep(Math.max(config.counterReporterPeriodMillis,config.gaugeReporterPeriodMillis)+100)
 
   System.exit(0)
